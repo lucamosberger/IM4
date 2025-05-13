@@ -26,10 +26,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
     // Insert the new user
-    $insert = $pdo->prepare("INSERT INTO users (email, password) VALUES (:email, :pass)");
+    $insert = $pdo->prepare("INSERT INTO users (email, password ) VALUES (:email, :pass)");
     $insert->execute([
         ':email' => $email,
-        ':pass'  => $hashedPassword
+        ':pass'  => $hashedPassword,   
     ]);
 
     echo json_encode(["status" => "success"]);

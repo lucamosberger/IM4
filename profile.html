@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Protected Page</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <h1>Profilübersicht</h1>
+
+  <!-- This is where we'll dynamically show the protected content -->
+  <section id="userProfile">
+    <h2>Benutzerprofil</h2>
+    <p id="userFirstName">Vorname: <span id="firstName">Test</span></p>
+    <p id="userLastName">Nachname: <span id="lastName">Test</span></p>
+  </section>
+
+  <section id="addAdditionalInfo">
+    <h2>Zusätzliche Informationen</h2>
+    <input type="text" id="inputFirstName" placeholder="Vorname" />
+    <input type="text" id="inputLastName" placeholder="Nachname" />
+    <button id="btnSaveAdditionalInfo">Speichern</button>
+  </section>
+
+  <section id="updateBirthday">
+    <h2>Geburtsjahr aktualisieren</h2>
+    <!-- Im Feld soll der aktuell eingetragene Wert, aus der DB angezeigt werden -->
+    <input type="number" id="inputBirthday" />
+    <button id="btnUpdateBirthday">Geburtsjahr Aktualisieren</button>
+  </section>
+  <button id="btnDeleteInformation">Kontoinformationen Löschen</button>
+
+
+
+  <button id="logoutBtn">Logout</button>
+
+  <script type="module" src="js/profile.js"></script>
+  <script src="js/logout.js"></script>
+</body>
+
+</html>

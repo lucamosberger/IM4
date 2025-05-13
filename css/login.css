@@ -1,0 +1,100 @@
+/* Grundlayout */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #dcdcdc;
+    color: #336D92;
+  }
+  
+  /* Header */
+  header {
+    background-color: #4a80a6;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: bold;
+    font-family: 'Impact', sans-serif;
+  }
+  
+  /* Menü und Profil-Icon (optional) */
+  .menu-icon, .profile-icon {
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .menu-icon {
+    margin-right: 15px;
+  }
+  
+  /* Formular-Stil */
+  form#loginForm {
+    max-width: 400px;
+    margin: 80px auto;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  form#loginForm div {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  form#loginForm label {
+    font-weight: bold;
+    font-size: 18px;
+    color: #4a80a6;
+    margin-bottom: 5px;
+    font-family: 'Impact', sans-serif;
+  }
+  
+  form#loginForm input {
+    padding: 15px;
+    border: none;
+    border-radius: 15px;
+    font-size: 16px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  /* Login-Button */
+  form#loginForm button {
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 15px;
+    background-color: #4a80a6;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  form#loginForm button:hover {
+    background-color: #3a6c90;
+  }
+  
+  /* Registrierungshinweis */
+  p {
+    text-align: center;
+    margin-top: 40px;
+    color: #336D92;
+  }
+  
+  a {
+    color: #336D92;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  

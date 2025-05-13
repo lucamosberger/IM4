@@ -1,0 +1,73 @@
+/* Grundlayout */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #e6e6e6;
+    font-family: 'Impact', sans-serif;
+    color: #4a80a6;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  /* Header */
+  header {
+    background-color: #4a80a6;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  .menu-icon, .profile-icon {
+    font-size: 28px;
+    cursor: pointer;
+  }
+  
+  /* Hauptinhalt */
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .punkte .anzahl {
+    font-size: 72px;
+    font-weight: bold;
+    display: block;
+  }
+  
+  .punkte .beschreibung {
+    font-size: 32px;
+    font-weight: bold;
+    display: block;
+    margin-top: -10px;
+  }
+  
+  /* Start-Button */
+  .start-button {
+    margin-top: 80px;
+    padding: 20px 60px;
+    font-size: 24px;
+    border: none;
+    border-radius: 40px;
+    background-color: #4a80a6;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .start-button:hover {
+    background-color: #3a6c90;
+  }
+  
