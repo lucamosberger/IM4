@@ -82,10 +82,10 @@ body {
   
   .namenfelder {
     display: flex;
-    gap: 10px;
-    width: 90%;
+    gap: 16px;
+    width: 100%;
     max-width: 350px;
-    justify-content: space-between;
+    margin-bottom: 10px;
   }
   
   .namenfelder div {
@@ -94,3 +94,13 @@ body {
     flex-direction: column;
   }
   
+  .vorname, .nachname {
+    width: calc(50% - 8px);
+  }
+
+  .logo-link {
+    text-decoration: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;  
+  }
