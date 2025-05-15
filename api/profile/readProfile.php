@@ -1,4 +1,8 @@
 <?php
+
+header('Content-Type: application/json');
+
+
 session_start();
 
 if (!isset($_SESSION['user_id'])) {
@@ -14,8 +18,19 @@ require_once '../../system/config.php';
 // Logged-in user ID
 $loggedInUserId = $_SESSION['user_id'];
 
+// $loggedInUserId = 1;
+
 // Get the logged-in user's data
-$stmt = $pdo->prepare("SELECT user_id, firstname, lastname, geburtsjahr FROM user_profiles WHERE user_id = :user_id");
+$stmt = $pdo->prepare("SELECT 
+  user_profiles.firstname,
+  user_profiles.lastname,
+  user_profiles.anrede,
+  users.email
+FROM 
+  user_profiles
+JOIN 
+  users ON user_profiles.user_id = :user_id;
+");
 $stmt->bindParam(':user_id', $loggedInUserId, PDO::PARAM_INT);
 $stmt->execute();
 
