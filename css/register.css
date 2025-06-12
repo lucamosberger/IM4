@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Impact', sans-serif;
+    background-color: #dcdcdc;
+    color: #ddd;
+  }
+  
+/* Header */
+  header {
+    background-color: #4a80a6;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+  }
+  
+ header h1 {
+    margin: 0;
+    font-size: 28px;
+    color: #ffffff;
+    font-weight: bold;
+    font-family: 'Impact', sans-serif;
+  }
+  
+  .menu-icon, .profile-icon {
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .menu-icon {
+    margin-right: 15px;
+  }
+
+  .profile-icon img {
+    width: 35px;         /* oder 40px, je nach Wunsch */
+    height: 35px;
+    border-radius: 50%;  /* rundes Profilbild */
+    object-fit: cover;   /* sauberer Zuschnitt */
+    cursor: pointer;
+  }
+   
+  .menu-icon img {
+    width: 35px;         /* oder 40px, je nach Wunsch */
+    height: 32px;  
+    cursor: pointer;
+  }
+
+/* Formular-Stil */
+  form#registerForm {
+    max-width: 400px;
+    margin: 80px auto;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  form#registerForm div{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  form#registerForm label {
+    font-weight: bold;
+    font-size: 18px;
+    color: #4a80a6;
+    margin-bottom: 5px;
+    font-family: 'Impact', sans-serif;
+  }
+  
+  form#registerForm input {
+    padding: 15px;
+    border: none;
+    border-radius: 15px;
+    font-size: 16px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+
+/* Button */
+form button {
+  background-color: #4a80a6;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 15px;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #355e81;
+}
+
+/* Link unter dem Formular */
+p {
+  margin-top: 40px;
+  font-size: 14px;
+  text-align: center;
+  color: #336d92;
+  font-family: Arial, sans-serif;
+}
+
+a {
+  color: #41779f;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
