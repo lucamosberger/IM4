@@ -1,4 +1,4 @@
-# Authentication
+<!-- # Authentication
 
 Hier befindet sich Zusatzmaterial zu den Slides mit dem Thema "Authentication".
 
@@ -98,4 +98,4 @@ session_destroy();
 header('Content-Type: application/json');
 echo json_encode(["status" => "success"]);
 exit;
-```
+``` -->

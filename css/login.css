@@ -43,7 +43,7 @@ body {
     gap: 20px;
   }
   
-  form#loginForm div {
+  form#loginForm div{
     display: flex;
     flex-direction: column;
   }
@@ -82,6 +82,10 @@ body {
     background-color: #3a6c90;
   }
   
+  h1 {
+    text-align: center;
+    margin-top: 100px;
+  }
   /* Registrierungshinweis */
   p {
     text-align: center;
