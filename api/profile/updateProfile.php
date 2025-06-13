@@ -16,7 +16,7 @@ $loggedInUserId = $_SESSION['user_id'];
 $input = json_decode(file_get_contents('php://input'), true);
 
 // Validate input
-$requiredFields = ['vorname', 'nachname', 'email', 'anrede'];
+$requiredFields = ['user_name', 'vorname', 'nachname', 'email', 'anrede'];
 foreach ($requiredFields as $field) {
     if (empty($input[$field])) {
         http_response_code(400);
@@ -25,6 +25,7 @@ foreach ($requiredFields as $field) {
     }
 }
 
+$user_name = trim($input['user_name']);
 $vorname = trim($input['vorname']);
 $nachname = trim($input['nachname']);
 $anrede = trim($input['anrede']) ;
@@ -37,12 +38,13 @@ try {
 
     // Update user_profiles table
     $stmtProfile = $pdo->prepare("UPDATE user_profiles 
-                                  SET firstname = :vorname, lastname = :nachname, anrede = :anrede 
+                                  SET firstname = :vorname, lastname = :nachname, anrede = :anrede, user_name = :user_name
                                   WHERE user_id = :user_id");
     $stmtProfile->execute([
         ':vorname' => $vorname,
         ':nachname' => $nachname,
         ':anrede' => $anrede,
+        ':user_name' => $user_name,
         ':user_id' => $loggedInUserId
     ]);
 

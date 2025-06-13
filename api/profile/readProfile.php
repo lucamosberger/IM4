@@ -25,11 +25,12 @@ $stmt = $pdo->prepare("SELECT
   user_profiles.firstname,
   user_profiles.lastname,
   user_profiles.anrede,
+  user_profiles.user_name,
   users.email
 FROM 
-  user_profiles
-JOIN 
-  users ON user_profiles.user_id = :user_id;
+  user_profiles, users
+WHERE
+  users.id = user_profiles.user_id and user_profiles.user_id = :user_id
 ");
 $stmt->bindParam(':user_id', $loggedInUserId, PDO::PARAM_INT);
 $stmt->execute();

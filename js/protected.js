@@ -3,7 +3,6 @@ async function checkAuth() {
     const response = await fetch("/api/protected.php", {
       credentials: "include",
     });
-
     if (response.status === 401) {
       window.location.href = "/login.html";
       return false;

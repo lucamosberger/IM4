@@ -1,3 +1,5 @@
+// wird nicht gebraucht
+
 <?php
 session_start();
 

@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     console.log("Profilseite geladen");
     const form = document.getElementById("profilForm");
+    const user_nameInput = document.getElementById("user_name");
     const anredeInput = document.getElementById("anrede");
     const vornameInput = document.getElementById("vorname");
     const nachnameInput = document.getElementById("nachname");
@@ -14,6 +15,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     nachnameInput.value = data.user.lastname || "";
     emailInput.value = data.user.email || "";
     anredeInput.value = data.user.anrede || "";
+    user_nameInput.value = data.user.user_name || "";
 
 
     // ✅ Speichern
@@ -21,6 +23,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         e.preventDefault();
 
         const daten = {
+            user_name: user_nameInput.value,
             anrede: anredeInput.value,
             vorname: vornameInput.value,
             nachname: nachnameInput.value,
