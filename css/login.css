@@ -98,6 +98,21 @@ body {
   h1 {
     text-align: center;
     margin-top: 100px;
-    color: #4a80a6;
+    
+  }
+  /* Registrierungshinweis */
+  p {
+    text-align: center;
+    margin-top: 40px;
+    color: #336D92;
+  }
+  
+  a {
+    color: #336D92;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
   }
   
