@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Impact', sans-serif;
+    background-color: #dcdcdc;
+    color: #ddd;
+  }
+  
+/* Header */
+  header {
+    background-color: #4a80a6;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+  }
+  
+ header h1 {
+    margin: 0;
+    font-size: 28px;
+    color: #ffffff;
+    font-weight: bold;
+    font-family: 'Impact', sans-serif;
+  }
+  
+  .menu-icon, .profile-icon {
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .menu-icon {
+    margin-right: 15px;
+  }
+
+  .profile-icon img {
+    width: 35px;         /* oder 40px, je nach Wunsch */
+    height: 35px;
+    border-radius: 50%;  /* rundes Profilbild */
+    object-fit: cover;   /* sauberer Zuschnitt */
+    cursor: pointer;
+  }
+   
+  .menu-icon img {
+    width: 35px;         /* oder 40px, je nach Wunsch */
+    height: 32px;  
+    cursor: pointer;
+  }
+
+
+h1 {
+    text-align: center;
+    margin-top: 100px;
+    color: #4a80a6;
+    font-family: 'Impact', sans-serif;
+    font-weight: bold;
+    font-size: 36px;
+  }
