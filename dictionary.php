@@ -114,6 +114,7 @@ $words = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <h1>Dictionary</h1>
 
   <main>
+
     <!-- Paginierung oben -->
     <div class="pagination">
       <?php if ($page > 1): ?>
