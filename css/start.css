@@ -12,6 +12,7 @@ body {
   
   /* Header */
   header {
+    position: relative;
     background-color: #4a80a6;
     color: white;
     padding: 20px;
@@ -21,13 +22,17 @@ body {
   }
   
   header h1 {
-    margin: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 28px;
   }
   
   .menu-icon, .profile-icon {
-    font-size: 28px;
+    font-size: 32px;
     cursor: pointer;
+    padding-right: 5px;
+    padding-left: 5px;
   }
   
   /* Hauptinhalt */
@@ -65,10 +70,12 @@ body {
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   
   .start-button:hover {
     background-color: #3a6c90;
+    transform: scale(1.05);
   }
   
   .profile-icon img {
@@ -84,3 +91,43 @@ body {
     height: 32px;  
     cursor: pointer;
   }
+
+  /* Menü-Icons weiß färben */
+.menu-icons .menu-icon i,
+.profile-icon i {
+  color: #ffffff;
+  transition: color 0.2s ease;
+}
+
+.menu-icon i,
+.menu-icon:visited i,
+.menu-icon:active i,
+.menu-icon:focus i,
+.profile-icon i,
+.profile-icon:visited i,
+.profile-icon:active i,
+.profile-icon:focus i {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.menu-icon,
+.menu-icon:visited,
+.menu-icon:focus,
+.menu-icon:active,
+.profile-icon,
+.profile-icon:visited,
+.profile-icon:focus,
+.profile-icon:active {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Hover-Effekt: Farbe der Icons ändern */
+.menu-icons .menu-icon:hover i {
+  color: #e6e6e6;
+}
+
+.profile-icon:hover i {
+  color: #e6e6e6;
+}

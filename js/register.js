@@ -20,13 +20,13 @@ document
       const result = await response.json();
 
       if (result.status === "success") {
-        alert("Registration successful! You can now log in.");
+        // alert("Registration successful! You can now log in.");
         window.location.href = "index.html";
       } else {
-        alert(result.message || "Registration failed.");
+        // alert(result.message || "Registration failed.");
       }
     } catch (error) {
       console.error("Error:", error);
-      alert("Something went wrong!");
+      // alert("Something went wrong!");
     }
   });

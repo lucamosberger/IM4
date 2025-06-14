@@ -23,10 +23,18 @@ body {
     font-weight: bold;
     font-family: 'Impact', sans-serif;
   }
+
+    .logo-link {
+    text-decoration: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;  
+  }
   
   .menu-icon, .profile-icon {
-    font-size: 24px;
+    font-size: 32px;
     cursor: pointer;
+    padding: 5px;
   }
 
   .menu-icon {
@@ -56,3 +64,141 @@ h1 {
     font-weight: bold;
     font-size: 36px;
   }
+
+
+  /* game.css */
+
+/* Farbpalette */
+:root {
+  --color-bg:       #f0f0f0;
+  --color-primary:  #3b6997; /* dunkleres Blau */
+  --color-secondary:#2e4f6d; /* noch dunkleres Blau */
+  --color-accent:   #ff6f61; /* Akzentfarbe (z.B. falsch) */
+  --color-success:  #4caf50; /* Akzentfarbe (z.B. richtig) */
+  --color-text:     #ffffff;
+  --color-text-dark:#333333;
+}
+
+/* Haupt-Container */
+#game-screen,
+#end-screen {
+  max-width: 480px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border-radius: 8px;
+  background-color: var(--color-secondary);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Frage-Bereich */
+#question {
+  margin-bottom: 1rem;
+}
+#word {
+  font-size: 1.8rem;
+  color: var(--color-text);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Buttons für die Optionen */
+#choices button {
+  display: block;
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.75rem;
+  font-size: 1rem;
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+#choices button:hover:not(:disabled) {
+  background-color: var(--color-secondary);
+}
+#choices button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+/* Feedback-Box */
+#feedback {
+  background-color: #ffffff;
+  color: var(--color-text-dark);
+  padding: 1rem;
+  border-radius: 4px;
+  margin-top: 1rem;
+}
+#feedback-text {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+#feedback-example {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Weiter-Button */
+#next-btn,
+#restart-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+#next-btn:hover,
+#restart-btn:hover {
+  background-color: var(--color-secondary);
+}
+
+/* Endscreen */
+#end-screen {
+  text-align: center;
+}
+#round-score,
+#total-score {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+  color: var(--color-text);
+}
+
+/* Icon im Feedback */
+#feedback-icon {
+  display: block;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+/* grün für richtig, rot für falsch */
+.correct {
+  color: var(--color-success);
+}
+.incorrect {
+  color: var(--color-accent);
+}
+
+  /* Menü-Icons weiß färben */
+.menu-icons .menu-icon i,
+.profile-icon i {
+  color: #ffffff;
+  transition: color 0.2s ease;
+}
+
+/* Hover-Effekt: Farbe der Icons ändern */
+.menu-icons .menu-icon:hover i {
+  color: #e6e6e6;
+}
+
+.profile-icon:hover i {
+  color: #e6e6e6;
+}

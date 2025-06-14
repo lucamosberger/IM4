@@ -8,13 +8,47 @@
   <body>
     <header>
       <div class="menu-icon">
-        <img src="images/menu.image.png" alt="menu"></div>
-      <h1>Skibidictionary</h1>
+        <!-- <img src="images/menu.image.png" alt="menu"> -->
+      </div>
+      <h1> <a href="start.php" class="logo-link">Skibidictionary</a></h1>
       <div class="profile-icon">
-        <img src="images/logo.image.png" alt="Profil">
+        <!-- <img src="images/logo.image.png" alt="Profil"> -->
       </div>
     </header>  
 
     <h1>Skibidictionary Quiz</h1>
+
+
+    <div id="game-screen">
+
+      <p id="counter" style="text-align:center; margin-bottom:1rem; color:var(--color-text);"></p>
+
+      <div id="question">
+        <h2 id="word"></h2>
+        <div id="choices"></div>
+      </div>
+
+      <div id="feedback" style="display:none;">
+
+        <span id="feedback-icon"></span>
+
+        <p id="feedback-text"></p>
+        <p id="feedback-example"></p>
+        <button id="next-btn">Weiter</button>
+      </div>
+    </div>
+
+    <div id="end-screen" style="display:none;">
+      <h2>Ende!</h2>
+      <p id="round-score"></p>
+      <p id="total-score"></p>
+      <button id="restart-btn">Nochmal spielen</button>
+    </div>
+
+  <script src="js/game.js"></script>
+
+</body>
+</html>
+
 
     

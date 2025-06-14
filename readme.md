@@ -1,71 +1,15 @@
-# 🔑👤 Authentifizierung Minimal (Boilerplate)
+Projektname: Skibidictionary
+Autor:innen: Nina Keusch, Luca Mosberger
+Nina.keusch@stud.fhgr.ch | luca.mosberger@stud.fhgr.ch 
+Figma: https://www.figma.com/design/6rCJFSqCDu9saTy3GwqzTj/IM-4-%E2%80%93-App-Konzeption--Copy-?node-id=78-325&t=5wjkw1vrzD8QjBa6-1 
+GitHub: https://github.com/lucamosberger/IM4.git 
+Projekt-URL: https://skibidictionary.lucamosberger.ch
+Weitere Verwendung: Das Projekt darf öffentlich zugänglich gemacht werden. Wir planen keine weitere eigene Verwendung und Überarbeitung. 
 
-![Static Badge](https://img.shields.io/badge/Sprache-PHP-%23f7df1e)
-![Static Badge](https://img.shields.io/badge/Kurs-MMP_IM4-blue)
-![Last Changed](https://img.shields.io/endpoint?url=https://badges.crazy-internet.ch/im4_example.php)
+Dokumentation:
 
-> 🎨 Dieses Boilerplate kann entweder in einem Code-Along Schritt für Schritt gemeinsam erarbeitet werden oder fixfertig auf einem Webserver installiert werden.
+Die Idee war es zu Beginn, eine Hilfestellung für ältere Menschen zu erstellen, die Welt der jungen Menschen zu verstehen. Wir planten ursprünglich nicht nur Jugendwörter einzubauen, beschränkten uns aber am Ende darauf, weil es die Datenbankerstellung und -struktur deutlich vereinfachen würde. Als Inspiration für unser Projekt diente DuoLingo, eine Lern-App für Sprachen. Dem erstellten Screen Flow blieben wir relativ treu. Ein paar kleine Funktionen wurden aber verworfen, unter anderem die Auswahloption oben rechts, die ein Dropdown-Menu hätte öffnen sollen, da die Option Einstellungen nicht benötigt wurde und für nur zwei Optionen kein Dropdown-Menu nötig schien. Wir entschieden uns der Einfachheit halber, die Webapp nicht wie im Mockup für Smartphones, sondern für den Laptop-Screen zu optimieren. 
 
-Dieses Repository beinhaltet ein vollständiges, minimales Authenzifizierungs-System basierend auf PHP als Backend und HTML/CSS/JS als Frontend.
+Wir begannen mit der Erstellung der Datenbank in PHPmyAdmin. Wir entschieden uns für die Datenbanken woerter, multiple_choice, users und user_profiles, die wir bis zum Schluss beibehielten. Die Jugendwörter- und Multiple Choice-Listen, welche am Ende 100 Wörter umfassten, vervollständigten wir nach dem Erstellen von mehreren Beispielen mit ChatGPT. Wir gaben den Wörtern auch einen Schwierigkeitsgrad, verwarfen diese Idee aber am Ende, da wir uns für eine zufällige Anordnung der Wörter entschieden. 
 
-Es ermöglicht Benutzern das `Registrieren`, `Anmelden`, `Abmelden` und den Zugriff auf eine `geschützte Seite` nach erfolgreicher Authentifizierung.
-
-# 🏁 Live - Version
-
-Du kannst Homely unter folgendem Link testen:
-
-[https://im4.crazy-internet.ch/](https://im4.crazy-internet.ch/)
-
-## ⚙️ Installation
-
-Um dieses Boilerplate auf dem eigenen Web-Server zu installieren, führe folgende Schritte aus:
-
-### 1. Download
-
-- [Klone das Repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) über GitHub oder [downloade das Repository als ZIP Datei](https://docs.github.com/en/repositories/working-with-files/using-files/downloading-source-code-archives) auf deinen eigenen Computer.
-
-### 2. Datenbank
-
-- Erstelle eine neue Datenbank bei deinem Hoster (z.B. [Infomaniak](https://www.infomaniak.com/de/support/faq/1981/mysqlmariadb-benutzer-und-datenbanken-verwalten)).
-
-- Importiere die Datei `system/database.sql` in die neue Datenbank, um die `users` Tabelle zu erstellen.
-
-### 3. Code
-
-- Benenne die Datei `system/config.php.blank` in `system/config.php` um.
-
-- Passe die Datenbankverbindungsdaten in der Datei `system/config.php` an.
-
-### 4. FTP Connect
-
-- Erstelle eine neue FTP Verbindung mit dem SFTP Plugin gemäss [Anleitung im MMP 101](https://github.com/Interaktive-Medien/101-MMP/blob/main/resources/sftp.md).
-
-# 📁 Struktur
-
-## 🎨 Frontend
-
-### root (Basis-Verzeichnis)
-
-- beinhaltet alle HTML-Dateien des Frontends.
-- beinhaltet die `.gitignore` Datei, welche die Dateien und Verzeichnisse ausblendet, die nicht auf GitHub hochgeladen werden sollen.
-
-### js
-
-- beinhaltet alle JavaScript-Dateien des Frontends.
-
-### css
-
-- beinhaltet alle CSS-Dateien des Frontends.
-
-## 🤖 Backend
-
-### api
-
-- Beinhaltet alle API-Endpunkte des Backends.
-- Diese Dateien werden von `JavaScript` aufgerufen und geben eine Antwort an `JavaScript` zurück.
-
-### system
-
-- Beinhaltet die Konfigurationsdatei für die Datenbankverbindung.
-- Beinhaltet die Datei `database.sql`, die die `users` Tabelle erstellt.
-- Beinhaltet die Datei `config.php`, die die Konfiguration des Backends enthält.
+Wir nutzten einzelne Code-Fragmente aus den auf Moodle zur Verfügung gestellten Code-Templates für unser Projekt, wie zum Beispiel einen Teil der CRUD-Struktur. Wir erstellten für jede Page zuerst HTML-, CSS- und JS-Dateien erstellten und begannen mit dem Login. Anfangs bekamen wir ein grosses durcheinander mit zwei sich überschneidenden Index- und Login-Seiten und entschieden uns, das Login in den Index zu holen. Ebenfalls hatten wir Probleme damit, dass der User nach dem Login auf eine veraltete und ab diesem Punkt bereits längst gelöschte Template-Seite von protected.html weitergeleitet wurde. Manche JS-Skripte mussten einzeln im Browser aufgerufen und mit einem Hard Reload aktualisiert werden. Ausserdem liefen wir in einen hartnäckigen Speicherfehler, wenn die E-Mail-Adresse im Profil angepasst wurde. Mit der Hilfe von Adrian Janka (King) konnten wir diese und 100 weitere Probleme zum Glück beheben. Aufgrund von Adrians Feedback verwarfen wir auch den Cooldown-Timer und anfänglich noch kompliziertere Berechnungen fürs Punktesystem, welche Streaks beinhaltet hätten. 

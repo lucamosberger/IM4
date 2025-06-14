@@ -18,35 +18,39 @@ document.addEventListener("DOMContentLoaded", async () => {
     user_nameInput.value = data.user.user_name || "";
 
 
-    // ✅ Speichern
     form.addEventListener("submit", (e) => {
-        e.preventDefault();
+    e.preventDefault();
 
-        const daten = {
-            user_name: user_nameInput.value,
-            anrede: anredeInput.value,
-            vorname: vornameInput.value,
-            nachname: nachnameInput.value,
-            email: emailInput.value,
-            passwort: passwortInput.value
-        };
+    const daten = {
+        user_name: user_nameInput.value,
+        anrede: anredeInput.value,
+        vorname: vornameInput.value,
+        nachname: nachnameInput.value,
+        email: emailInput.value,
+        passwort: passwortInput.value
+    };
 
-        fetch("api/profile/updateProfile.php", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(daten)
+    fetch("api/profile/updateProfile.php", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(daten)
+    })
+        .then(response => response.json())
+        .then(result => {
+            if (result.status === "success") {
+                // ✅ Weiterleitung zur Startseite
+                window.location.href = "start.php";
+            } else {
+                alert("Fehler beim Speichern!");
+            }
         })
-            .then(response => response.json())
-            .then(result => {
-                if (result.status === "success") {
-                    alert("Profil gespeichert!");
-                } else {
-                    alert("Fehler beim Speichern!");
-                }
-            });
-    });
+        .catch(error => {
+            console.error("Fehler beim Senden:", error);
+            alert("Ein Fehler ist aufgetreten.");
+        });
+});
 });
 
 async function fetchProfileData() {
@@ -64,3 +68,5 @@ async function fetchProfileData() {
         console.error("Fehler beim Abrufen der Profil-Daten:", error);
     }
 }
+
+

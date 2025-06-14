@@ -15,13 +15,13 @@ document.getElementById("loginForm").addEventListener("submit", async (e) => {
     const result = await response.json();
 
     if (result.status === "success") {
-      alert("Login successful!");
-      window.location.href = "start.html";
+      // alert("Login successful!");
+      window.location.href = "start.php";
     } else {
-      alert(result.message || "Login failed.");
+      // alert(result.message || "Login failed.");
     }
   } catch (error) {
     console.error("Error:", error);
-    alert("Something went wrong!");
+    // alert("Something went wrong!");
   }
 });

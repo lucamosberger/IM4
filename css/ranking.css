@@ -26,8 +26,9 @@ body {
   }
   
   .menu-icon, .profile-icon {
-    font-size: 28px;
+    font-size: 32px;
     cursor: pointer;
+    padding: 5px;
   }
 
   .profile-icon img {
@@ -82,4 +83,46 @@ h2 {
   font-weight: bold;
   color: #41779f;
   margin-right: 6px;
+}
+
+  /* Menü-Icons weiß färben */
+.menu-icons .menu-icon i,
+.profile-icon i {
+  color: #ffffff;
+  transition: color 0.2s ease;
+}
+
+/* Hover-Effekt: Farbe der Icons ändern */
+.menu-icons .menu-icon:hover i {
+  color: #e6e6e6;
+}
+
+.profile-icon:hover i {
+  color: #e6e6e6;
+}
+
+.logo-link {
+    text-decoration: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;  
+  }
+
+  .back-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4a80a6;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  font-family: 'Impact', sans-serif;
+}
+
+.back-button:hover {
+  background-color: #3b6d8d;
+  transform: scale(1.05);
 }

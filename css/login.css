@@ -24,9 +24,10 @@ body {
   }
   
   /* Menü und Profil-Icon (optional) */
-  .menu-icon, .profile-icon {
-    font-size: 24px;
+   .menu-icon, .profile-icon {
+    font-size: 32px;
     cursor: pointer;
+    padding: 5px;
   }
   
   .menu-icon {
@@ -116,3 +117,18 @@ body {
     text-decoration: underline;
   }
   
+    /* Menü-Icons weiß färben */
+.menu-icons .menu-icon i,
+.profile-icon i {
+  color: #ffffff;
+  transition: color 0.2s ease;
+}
+
+/* Hover-Effekt: Farbe der Icons ändern */
+.menu-icons .menu-icon:hover i {
+  color: #e6e6e6;
+}
+
+.profile-icon:hover i {
+  color: #e6e6e6;
+}

@@ -6,14 +6,14 @@ body {
     color: #ddd;
   }
   
-/* Header */
+  /* Header */
   header {
     background-color: #4a80a6;
+    color: white;
     padding: 20px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    color: white;
+    align-items: center;
   }
   
  header h1 {
@@ -25,8 +25,9 @@ body {
   }
   
   .menu-icon, .profile-icon {
-    font-size: 24px;
+    font-size: 32px;
     cursor: pointer;
+    padding: 5px;
   }
 
   .menu-icon {
@@ -98,7 +99,7 @@ body {
 .arrow {
   font-size: 1.2rem;
 }
- 
+
 
 h1 {
     text-align: center;
@@ -109,3 +110,19 @@ h1 {
     font-size: 36px;
   }
   /* Registrierungshinweis */
+
+    /* Menü-Icons weiß färben */
+.menu-icons .menu-icon i,
+.profile-icon i {
+  color: #ffffff;
+  transition: color 0.2s ease;
+}
+
+/* Hover-Effekt: Farbe der Icons ändern */
+.menu-icons .menu-icon:hover i {
+  color: #e6e6e6;
+}
+
+.profile-icon:hover i {
+  color: #e6e6e6;
+}
