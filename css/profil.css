@@ -1,193 +1,188 @@
+/* === Grundlegendes Layout === */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Impact', sans-serif;
-    background-color: #35566b;
-    color: #ddd;
-  }
-  
-  /* Header */
-  header {
-    background-color: #4a80a6;
-    color: white;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  header h1 {
-    margin: 0;
-    font-size: 28px;
-  }
-  
-  .menu-icon, .profile-icon {
-    font-size: 32px;
-    cursor: pointer;
-    padding-right: 5px;
-    padding-left: 5px;
-  }
-  
-  /* Profilbereich */
-  .profil-container {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .profilbild {
-    width: 200px;
-    height: 200px;
-    border: 6px solid #ccc;
-    border-radius: 50%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .profilbild .icon {
-    font-size: 100px;
-  }
-  
-  h2 {
-    font-size: 28px;
-    margin-top: 15px;
-    color: #e6e6e6;
-  }
-  
-  /* Formular */
-  .profil-formular {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .profil-formular label {
-    align-self: flex-start;
-    font-size: 18px;
-    color: #ccc;
-    margin-left: 10px;
-  }
-  
-  .profil-formular input {
-    width: 90%;
-    max-width: 350px;
-    padding: 14px;
-    border-radius: 16px;
-    border: none;
-    font-size: 18px;
-    background-color: white;
-    color: #2a2a2a;
-  }
-  
-  .namenfelder {
-    display: flex;
-    gap: 16px;
-    width: 100%;
-    max-width: 350px;
-    margin-bottom: 10px;
-  }
-  
-  .namenfelder div {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-  }
-  
-
-
-  .logo-link {
-    text-decoration: none;
-    color: inherit;
-    font: inherit;
-    cursor: pointer;  
-  }
-
-  .profile-icon img {
-    width: 35px;         /* oder 40px, je nach Wunsch */
-    height: 35px;
-    border-radius: 50%;  /* rundes Profilbild */
-    object-fit: cover;   /* sauberer Zuschnitt */
-    cursor: pointer;
-  }
-  
-  .menu-icon img {
-    width: 35px;         /* oder 40px, je nach Wunsch */
-    height: 32px;  
-    cursor: pointer;
-  }
-
-  button {
-    padding: 12px;
-    margin-top: 30px;
-    background-color: white;
-    color: #4a80a6;
-    border: none;
-    border-radius: 10px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: #9bbfd9;
-  }
-  
-
-    /* Menü-Icons weiß färben */
-.menu-icons .menu-icon i,
-.profile-icon i {
-  color: #ffffff;
-  transition: color 0.2s ease;
+  margin: 0;
+  padding: 0;
+  font-family: 'Impact', sans-serif;
+  background-color: #35566b;
+  color: #ddd;
 }
 
-/* Hover-Effekt: Farbe der Icons ändern */
-.menu-icons .menu-icon:hover i {
-  color: #e6e6e6;
+/* === Header === */
+header {
+  background-color: #4a80a6;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.profile-icon:hover i {
-  color: #e6e6e6;
-}
-
-  /* Menü-Icons weiß färben */
-.menu-icons .menu-icon i,
-.profile-icon i {
-  color: #ffffff;
-  transition: color 0.2s ease;
-}
-
-.menu-icon i,
-.menu-icon:visited i,
-.menu-icon:active i,
-.menu-icon:focus i,
-.profile-icon i,
-.profile-icon:visited i,
-.profile-icon:active i,
-.profile-icon:focus i {
-  color: #ffffff;
-  text-decoration: none;
+header h1 {
+  margin: 0;
+  font-size: 28px;
 }
 
 .menu-icon,
-.menu-icon:visited,
-.menu-icon:focus,
-.menu-icon:active,
-.profile-icon,
-.profile-icon:visited,
-.profile-icon:focus,
-.profile-icon:active {
+.profile-icon {
+  font-size: 32px;
+  cursor: pointer;
+  padding: 0 5px;
+}
+
+.menu-icon i,
+.profile-icon i {
   color: #ffffff;
-  text-decoration: none;
+  transition: color 0.2s ease;
 }
 
-/* Hover-Effekt: Farbe der Icons ändern */
-.menu-icons .menu-icon:hover i {
-  color: #e6e6e6;
-}
-
+.menu-icon:hover i,
 .profile-icon:hover i {
   color: #e6e6e6;
+}
+
+.logo-link {
+  text-decoration: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+/* === Profil-Container === */
+.profil-container {
+  background-color: #3f617a;
+  border-radius: 20px;
+  padding: 30px;
+  margin: 40px auto;
+  max-width: 600px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* === Profilbild (kleiner & zentriert) === */
+.profilbild {
+  width: 100px;
+  height: 100px;
+  border: 4px solid #ccc;
+  border-radius: 50%;
+  margin: 0 auto 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2a2a2a;
+}
+
+.profilbild .icon {
+  font-size: 50px;
+}
+
+/* === Formular allgemein === */
+.profil-formular {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.profil-formular label {
+  align-self: flex-start;
+  font-size: 16px;
+  color: #ccc;
+  margin-top: 16px;
+  margin-bottom: 4px;
+}
+
+.profil-formular input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  background-color: white;
+  color: #2a2a2a;
+  box-sizing: border-box;
+}
+
+/* === Zweispaltige Felder: Vor- und Nachname === */
+.namenfelder {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+  width: 100%;
+}
+
+.namenfelder div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.namenfelder label {
+  margin-top: 0;
+}
+
+/* === Buttons === */
+.profil-formular button {
+  padding: 12px;
+  margin-top: 24px;
+  background-color: white;
+  color: #4a80a6;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+  align-self: center;
+}
+
+.profil-formular button:hover {
+  background-color: #9bbfd9;
+}
+
+#logoutBtn {
+  background-color: #c0392b;
+  color: white;
+  margin-top: 16px;
+}
+
+#logoutBtn:hover {
+  background-color: #e74c3c;
+}
+
+/* === Responsive Optimierungen === */
+@media (max-width: 480px) {
+  .namenfelder {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .profil-formular {
+    max-width: 95%;
+  }
+
+  .profilbild {
+    width: 80px;
+    height: 80px;
+  }
+
+  .profilbild .icon {
+    font-size: 40px;
+  }
+}
+
+.menu-icon a,
+.menu-icon a:visited,
+.menu-icon a:focus,
+.menu-icon a:hover,
+.menu-icon a:active,
+.profile-icon a,
+.profile-icon a:visited,
+.profile-icon a:focus,
+.profile-icon a:hover,
+.profile-icon a:active {
+  color: white;
+  text-decoration: none;
 }

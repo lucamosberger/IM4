@@ -45,11 +45,16 @@
       <input type="text" id="anrede" />
 
     
-      <label>Vorname</label>
+    <div class="namenfelder">
+      <div>
+      <label for="vorname">Vorname</label>
       <input type="text" id="vorname" />
-       
-      <label>Nachname</label>
-      <input type="text" id="nachname" />
+      </div>
+      <div>
+        <label for="nachname">Nachname</label>
+        <input type="text" id="nachname" />
+    </div>
+    </div>
       
 
       <label>E-mail</label>
@@ -61,12 +66,13 @@
 
     <!-- ✅ Speicher-Button -->
     <button type="submit">Änderungen speichern</button>
-
+    <button id="logoutBtn">Logout</button>
     </form>
     
   </div>
 
   <script src="js/profil.js"></script>
+  <script src="js/logout.js"></script>
 
 </body>
 </html>
