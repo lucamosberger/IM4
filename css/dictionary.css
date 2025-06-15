@@ -1,13 +1,18 @@
+/* Grundlayout */
 body {
     margin: 0;
     padding: 0;
+    background-color: #e6e6e6;
     font-family: 'Impact', sans-serif;
-    background-color: #dcdcdc;
-    color: #ddd;
+    color: #4a80a6;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
   }
   
   /* Header */
   header {
+    position: relative;
     background-color: #4a80a6;
     color: white;
     padding: 20px;
@@ -16,24 +21,32 @@ body {
     align-items: center;
   }
   
- header h1 {
-    margin: 0;
+  header h1 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 28px;
-    color: #ffffff;
-    font-weight: bold;
-    font-family: 'Impact', sans-serif;
   }
   
   .menu-icon, .profile-icon {
     font-size: 32px;
     cursor: pointer;
-    padding: 5px;
+    padding-right: 5px;
+    padding-left: 5px;
   }
-
-  .menu-icon {
-    margin-right: 15px;
+  
+  /* Hauptinhalt */
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
+  
 
+  
   .profile-icon img {
     width: 35px;         /* oder 40px, je nach Wunsch */
     height: 35px;
@@ -41,81 +54,42 @@ body {
     object-fit: cover;   /* sauberer Zuschnitt */
     cursor: pointer;
   }
-   
+  
   .menu-icon img {
     width: 35px;         /* oder 40px, je nach Wunsch */
     height: 32px;  
     cursor: pointer;
   }
 
-
-/* Formular-Stil */
-  form#registerForm {
-    max-width: 400px;
-    margin: 80px auto;
-    background-color: transparent;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .dictionary-list {
-  padding: 20px;
-  overflow-y: auto;
-  max-height: calc(100vh - 80px); /* Full height minus header */
-  margin-left: 300px;
-  margin-right: 300px;
-}
-
-.entry {
-  background-color: #f8f8f8;
-  margin-bottom: 16px;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.word {
-  padding: 18px;
-  font-size: 24px;
-  font-weight: bold;
-  color: #2d5975;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-}
-
-.definition {
-  display: none;
-  padding: 16px;
-  background-color: #4a80a6;
-  font-size: 16px;
-  line-height: 1.4;
-  text-align: center;
-  font-family: Arial, sans-serif;
-}
-
-.arrow {
-  font-size: 1.2rem;
-}
-
-
-h1 {
-    text-align: center;
-    margin-top: 100px;
-    color: #4a80a6;
-    font-family: 'Impact', sans-serif;
-    font-weight: bold;
-    font-size: 36px;
-  }
-  /* Registrierungshinweis */
-
-    /* Menü-Icons weiß färben */
+  /* Menü-Icons weiß färben */
 .menu-icons .menu-icon i,
 .profile-icon i {
   color: #ffffff;
   transition: color 0.2s ease;
+}
+
+.menu-icon i,
+.menu-icon:visited i,
+.menu-icon:active i,
+.menu-icon:focus i,
+.profile-icon i,
+.profile-icon:visited i,
+.profile-icon:active i,
+.profile-icon:focus i {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.menu-icon,
+.menu-icon:visited,
+.menu-icon:focus,
+.menu-icon:active,
+.profile-icon,
+.profile-icon:visited,
+.profile-icon:focus,
+.profile-icon:active {
+  color: #ffffff;
+  text-decoration: none;
 }
 
 /* Hover-Effekt: Farbe der Icons ändern */
@@ -125,4 +99,29 @@ h1 {
 
 .profile-icon:hover i {
   color: #e6e6e6;
+}
+
+
+
+
+
+
+
+  .back-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4a80a6;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  font-family: 'Impact', sans-serif;
+}
+
+.back-button:hover {
+  background-color: #3b6d8d;
+  transform: scale(1.05);
 }

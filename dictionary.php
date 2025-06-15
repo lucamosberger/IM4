@@ -45,7 +45,7 @@ $words = $stmt->fetchAll(PDO::FETCH_ASSOC);
   <title>Wörterbuch</title>
   <!-- Font Awesome für Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="css/start.css">
+  <link rel="stylesheet" href="css/dictionary.css">
   <style>
     /* Zusätzliche Styles für das Wörterbuch */
     main {
@@ -145,6 +145,9 @@ $words = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <a href="?page=<?php echo $page + 1; ?>">Nächste &#187;</a>
       <?php endif; ?>
     </div>
+    
+      <a href="start.php" class="back-button">Zurück</a>
+
   </main>
 </body>
 </html>

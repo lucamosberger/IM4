@@ -92,12 +92,7 @@ body {
     cursor: pointer;
   }
 
-  /* Menü-Icons weiß färben */
-.menu-icons .menu-icon i,
-.profile-icon i {
-  color: #ffffff;
-  transition: color 0.2s ease;
-}
+
 
 .menu-icon i,
 .menu-icon:visited i,
@@ -131,3 +126,6 @@ body {
 .profile-icon:hover i {
   color: #e6e6e6;
 }
+
+
+
