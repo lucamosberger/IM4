@@ -43,9 +43,11 @@ function displayQuestion(data) {
   feedbackEl.style.display = 'none';
   choicesEl.innerHTML = '';
 
-  data.choices.forEach(choice => {
+  const labels = ['A', 'B', 'C', 'D'];
+
+  data.choices.slice(0, 4).forEach((choice, index) => {
     const btn = document.createElement('button');
-    btn.textContent = `${choice.option_label}: ${choice.option_text}`;
+    btn.textContent = `${labels[index]}: ${choice.option_text}`;
     btn.classList.add('choice-btn');
     btn.onclick = () => handleAnswer(choice.is_correct, data);
     choicesEl.appendChild(btn);
