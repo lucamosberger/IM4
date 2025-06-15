@@ -151,3 +151,43 @@ body {
 .profile-icon:hover i {
   color: #e6e6e6;
 }
+
+  /* Menü-Icons weiß färben */
+.menu-icons .menu-icon i,
+.profile-icon i {
+  color: #ffffff;
+  transition: color 0.2s ease;
+}
+
+.menu-icon i,
+.menu-icon:visited i,
+.menu-icon:active i,
+.menu-icon:focus i,
+.profile-icon i,
+.profile-icon:visited i,
+.profile-icon:active i,
+.profile-icon:focus i {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.menu-icon,
+.menu-icon:visited,
+.menu-icon:focus,
+.menu-icon:active,
+.profile-icon,
+.profile-icon:visited,
+.profile-icon:focus,
+.profile-icon:active {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Hover-Effekt: Farbe der Icons ändern */
+.menu-icons .menu-icon:hover i {
+  color: #e6e6e6;
+}
+
+.profile-icon:hover i {
+  color: #e6e6e6;
+}
